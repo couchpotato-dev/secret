@@ -6,7 +6,6 @@ BLUE='\033[1;34m'
 NC='\033[0m'
 
 set_up() {
-
 	_get_info() {
 		local card
 		local card_info
@@ -98,6 +97,7 @@ set_up() {
 
 		return 0
 	}
+
 	_install_packages() {
 
 		local packages=(
