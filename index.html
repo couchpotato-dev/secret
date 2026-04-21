@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #333;
+        color: #eee;
+      }
+
+      .line-1 {
+        line-height: 10px;
+      }
+
+      .line-2 {
+        line-height: 50px;
+      }
+
+      .box {
+        height: 200px;
+        width: 200px;
+        border: 2px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .outer {
+        border: 2px solid white;
+        padding: 10px;
+        margin: 10px 0;
+      }
+
+      .two {
+        margin-top: 50px;
+      }
+
+      .three {
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>
+        <h1>Line Height: 10px</h1>
+      </legend>
+
+      <div class="line-1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+        cupiditate provident, minus fuga velit cumque, reprehenderit corrupti ea
+        quaerat nulla, minima consectetur veritatis aperiam corporis doloremque
+        sequi. Sapiente illum corrupti dolorem accusantium fuga illo iure. Sequi
+        corrupti voluptates necessitatibus doloremque!
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        <h1>Line Height: Normal (not set)</h1>
+      </legend>
+
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+        cupiditate provident, minus fuga velit cumque, reprehenderit corrupti ea
+        quaerat nulla, minima consectetur veritatis aperiam corporis doloremque
+        sequi. Sapiente illum corrupti dolorem accusantium fuga illo iure. Sequi
+        corrupti voluptates necessitatibus doloremque!
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        <h1>Line Height: 50px</h1>
+      </legend>
+
+      <div class="line-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+        cupiditate provident, minus fuga velit cumque, reprehenderit corrupti ea
+        quaerat nulla, minima consectetur veritatis aperiam corporis doloremque
+        sequi. Sapiente illum corrupti dolorem accusantium fuga illo iure. Sequi
+        corrupti voluptates necessitatibus doloremque!
+      </div>
+    </fieldset>
+
+    <h1>Margins</h1>
+    <div style="display: flex; justify-content: center; height: 500px;">
+      <div class="outer">
+        <div class="box one">Margin top: 0px</div>
+      </div>
+      <div class="outer">
+        <div class="box two">Margin top: 50px</div>
+      </div>
+      <div class="outer">
+        <div class="box three">Margin top: 100px</div>
+      </div>
+    </div>
+  </body>
+</html>
