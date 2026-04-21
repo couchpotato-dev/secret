@@ -10,10 +10,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "multer": "^2.1.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/couchpotato-dev/secret.git"
+  },
+  "bugs": {
+    "url": "https://github.com/couchpotato-dev/secret/issues"
+  },
+  "homepage": "https://github.com/couchpotato-dev/secret#readme"
 }
