@@ -9,6 +9,14 @@ const multer = require("multer");
 const upload_dir = path.join(__dirname, "uploads");
 const upload = multer({ dest: upload_dir });
 const port = process.env.PORT || 3000;
+const mongoose = require('mongoose')
+
+// mongoose.connect("mongodb+srv://luzaMhz:luzaMhz@cluster0.i8dkudl.mongodb.net/?appName=Cluster0").then(() => {
+//   console.log('Connected To Database')
+// }).catch(err => {
+//   console.log('Error Connecting to database')
+//   process.exit(1)
+// })
 
 !fs.existsSync(upload_dir) ? fs.mkdirSync(upload_dir) : "";
 
@@ -46,6 +54,16 @@ app.post("/upload", upload.single("image"), async (req, res) => {
     if (req.file) fs.unlinkSync(req.file.path);
     res.status(500).json({ error: "Upload failed" });
   }
+});
+
+app.get('/send', (req, res) => {
+  const filePath = path.join(__dirname, 'compress.sh');
+  res.sendFile(filePath, err => {
+    if (err) {
+      console.error('Error sending file:', err);
+      res.status(500).send('Could not send the file.');
+    }
+  });
 });
 
 app.listen(port, () => {
